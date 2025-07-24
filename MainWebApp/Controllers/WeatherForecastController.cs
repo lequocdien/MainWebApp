@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SharedLib;
 
 namespace MainWebApp.Controllers;
 
@@ -21,6 +22,9 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
+        var fullName = "Lê Quốc Diện";
+        Console.WriteLine(fullName.ToMyLower());
+        
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
