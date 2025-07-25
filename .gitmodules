@@ -1,3 +1,4 @@
 [submodule "SharedLibRepo"]
 	path = SharedLibRepo
 	url = https://github.com/lequocdien/SharedLib.git
+	branch = master
